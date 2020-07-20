@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+
+    <link rel="stylesheet" href="./css/styles/main.css">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script defer src="./js/game.js"></script>
+    <script defer src="./js/ball.js"></script>
+    <script defer src="./js/paddle.js"></script>
+</head>
+<body>
+    
+    <div id="intro">
+        <h1>Pong Game</h1>
+        <p>
+            This game requires you to move the paddle at the bottom of the screen left and right (with the mouse) to keep the ball from falling off the screen.
+            The longer you do this, the faster the ball will move and the higher your score will be.
+            Good luck!
+        </p>
+        <button id="PlayBtn">Play!</button>
+    </div>
+
+    <div id="Game_Container">
+        <div id="Ball"></div>
+        <div id="Paddle"></div>
+        <h1 id="Score_Container"></h1>
+        <h1 id="Level_Container"></h1>
+        <button id="PlayAgainBtn">Play Again!</button>
+        
+        <div id="Next_Level_Indicator">
+            <div id="Indicator_1"></div>
+            <div id="Indicator_2"></div>
+            <div id="Indicator_3"></div>
+        </div>
+    </div>
+
+</body>
+</html>

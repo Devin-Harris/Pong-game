@@ -1,0 +1,127 @@
+
+//Import colors and fonts
+$red-color: #e74c3c;
+$grey-color: #95a5a6;
+$white-color: #ecf0f1;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//Global Style
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+//Intro Style
+#intro {
+    font-family: 'montserrat';
+    width: 30%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    h1 {
+        font-size: 300%;
+        line-height: 100%;
+    }
+    p {
+        font-size: 100%;
+        margin: 2% 0;
+        line-height: 120%;
+    }
+    button {
+        height: 5%;
+        width: 100%;
+        background-color: $red-color;
+        color: white;
+        font-weight: 900;
+        border: none;
+        outline: none;
+        transition: .2s;
+        &:hover {
+            background-color: $grey-color;
+            cursor: pointer;
+        }
+    }
+}
+
+//Game Style
+#Game_Container {
+    width: 100vw;
+    height: 100vh;
+    background-color: $grey-color;
+    display: none;
+    position: absolute;
+    #Ball {
+        background-color: $red-color;
+        width: 5vmin;
+        height: 5vmin;
+        border-radius: 100%;
+        display: none;
+        position: absolute;
+        z-index: 5;
+    }
+    #Paddle {
+        background-color: $white-color;
+        width: 10vw;
+        height: 2vmin;
+        display: none;
+        position: absolute;
+        top: 85vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #Score_Container, #Level_Container {
+        color: $white-color;
+        position: absolute;
+        top: 10vh;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 10;
+        text-align: center;
+        font-size: 200%;
+    }
+    #Level_Container {
+        top: 15vh;
+        font-size: 100%;
+    }
+    button {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 5%;
+        width: 10%;
+        background-color: $red-color;
+        color: white;
+        font-weight: 900;
+        border: none;
+        outline: none;
+        display: none;
+        transition: .2s;
+        &:hover {
+            background-color: $grey-color;
+            border: 2px solid $white-color;
+            cursor: pointer;
+        }
+    }
+    #Next_Level_Indicator {
+        position: absolute;
+        top: 20vh;
+        left: 50%;
+        transform: translate(-50%);
+        display: none;
+        div {
+            height: 4vmin;
+            width: 4vmin;
+            border: 2px solid $white-color;
+            margin: 2px;
+            background-color: $white-color;
+            border-radius: 50%;
+        }
+    }
+}
